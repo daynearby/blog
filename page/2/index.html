@@ -188,7 +188,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="设置模块"><a href="#设置模块" class="headerlink" title="设置模块"></a>设置模块</h3><p>1.settings为入口，该DashboardSummary.java作为显示系统设置，在onresume（）时通过动态建立设置选项，选项的内容来自settingsActivity中。当设备的屏幕比较大的时候，就显示在左边，当尺寸比较小的时候全屏显示该fragment。（由布局文件决定）。<br>2.每个activity（也就是置的每个选项的类）继承SettingsActivity，使用PreferenceScreen作为列表显示，在xml使用preferenceHeader控件，作为一级界面，以列表的形式显示选项，并且在该activity或者是fragment中处理点击逻辑，如：界面的跳转，使用preferenceFragment实现显示第二级界面，。<br>3.每个功能模块入口的类应该是：功能名字+Settings。那么每个功能模块的都是继承preferenceFragment。</p>
-<p>蓝牙<br>每次读取的模式，结果都是false，那么就没有显示下面的扫描设置<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">final</span> ContentResolver resolver = getActivity().getContentResolver();</div><div class="line"><span class="keyword">final</span> <span class="keyword">boolean</span> bleScanningMode = Settings.Global.getInt(</div><div class="line">                resolver, Settings.Global.BLE_SCAN_ALWAYS_AVAILABLE, <span class="number">0</span>) == <span class="number">1</span>;</div></pre></td></tr></table></figure></p>
+<p>蓝牙<br>每次读取的模式，结果都是false，那么就没有显示下面的扫描设置<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">final</span> ContentResolver resolver = getActivity().getContentResolver();</span><br><span class="line"><span class="keyword">final</span> <span class="keyword">boolean</span> bleScanningMode = Settings.Global.getInt(</span><br><span class="line">                resolver, Settings.Global.BLE_SCAN_ALWAYS_AVAILABLE, <span class="number">0</span>) == <span class="number">1</span>;</span><br></pre></td></tr></table></figure></p>
 <p>取出的值是0, 0 == 1？</p>
         
       
@@ -242,7 +242,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2017 nearby
+    		&copy; 2018 nearby
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
