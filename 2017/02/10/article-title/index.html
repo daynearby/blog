@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="nearby">
 <meta property="og:description" content="设置模块1.settings为入口，该DashboardSummary.java作为显示系统设置，在onresume（）时通过动态建立设置选项，选项的内容来自settingsActivity中。当设备的屏幕比较大的时候，就显示在左边，当尺寸比较小的时候全屏显示该fragment。（由布局文件决定）。2.每个activity（也就是置的每个选项的类）继承SettingsActivity，使用Pref">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-08-18T06:42:20.589Z">
+<meta property="og:updated_time" content="2018-08-18T06:44:21.941Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="常用命令，问题解决思路">
 <meta name="twitter:description" content="设置模块1.settings为入口，该DashboardSummary.java作为显示系统设置，在onresume（）时通过动态建立设置选项，选项的内容来自settingsActivity中。当设备的屏幕比较大的时候，就显示在左边，当尺寸比较小的时候全屏显示该fragment。（由布局文件决定）。2.每个activity（也就是置的每个选项的类）继承SettingsActivity，使用Pref">
@@ -250,7 +250,7 @@
 </li>
 </ol>
 <h4 id="2018-07-24"><a href="#2018-07-24" class="headerlink" title="2018-07-24"></a>2018-07-24</h4><p>编译<br>LOCAL_JAVA_LIBRARIES所指定的为android系统使用的dex类库；<br>而LOCAL_STATIC_JAVA_LIBRARIES变量所指定的则是.class文件打包而成的JAR文件：即静态JAVA库。</p>
-<h4 id="2018-08-18"><a href="#2018-08-18" class="headerlink" title="2018-08-18"></a>2018-08-18</h4><p>加速gradl 构建速度‘<br>在c:/<username>/.gradle/中创建gradle.properties文件（对全部项目都有效），增加下面属性：<br>org.gradle.parallel=true<br>org.gradle.daemon=true<br>org.gradle.configureondaemon=true</username></p>
+<h4 id="2018-08-18"><a href="#2018-08-18" class="headerlink" title="2018-08-18"></a>2018-08-18</h4><p>加速gradl 构建速度‘<br>在c:/<username>/.gradle/中创建gradle.properties文件（对全部项目都有效），增加下面属性：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">org.gradle.parallel=<span class="literal">true</span></span><br><span class="line">org.gradle.daemon=<span class="literal">true</span></span><br><span class="line">org.gradle.configureondaemon=<span class="literal">true</span></span><br></pre></td></tr></table></figure></username></p>
 
       
 
