@@ -6,18 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://daynearby.github.io">
-  <title>nearby</title>
+  <title>Android studio 配置Javacv出现“More than one file was found with OS independent path”的解决办法 | nearby</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="������Ϣ�����ڲ�ֹ">
-<meta property="og:type" content="website">
-<meta property="og:title" content="nearby">
-<meta property="og:url" content="https://daynearby.github.io/index.html">
+  <meta name="description" content="前言最近在学习多媒体处理这一块，然后就找到javacv这个开源库,封装了计算机视觉处理所需要的全部库，很强大。 当前配置 Windows 10 专业版 64bit Android Studio 3.1.4 gradle 3.1.3  ##配置按照开源库中gradle的配置方法。">
+<meta name="keywords" content="开发">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Android studio 配置Javacv出现“More than one file was found with OS independent path”的解决办法">
+<meta property="og:url" content="https://daynearby.github.io/2018/08/18/dev-android-javacv-config-0/index.html">
 <meta property="og:site_name" content="nearby">
-<meta property="og:description" content="������Ϣ�����ڲ�ֹ">
+<meta property="og:description" content="前言最近在学习多媒体处理这一块，然后就找到javacv这个开源库,封装了计算机视觉处理所需要的全部库，很强大。 当前配置 Windows 10 专业版 64bit Android Studio 3.1.4 gradle 3.1.3  ##配置按照开源库中gradle的配置方法。">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="https://img-blog.csdn.net/20180818131204262?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4NDY3ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:image" content="https://img-blog.csdn.net/20180818133833760?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4NDY3ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
+<meta property="og:updated_time" content="2018-08-18T06:34:55.555Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nearby">
-<meta name="twitter:description" content="������Ϣ�����ڲ�ֹ">
+<meta name="twitter:title" content="Android studio 配置Javacv出现“More than one file was found with OS independent path”的解决办法">
+<meta name="twitter:description" content="前言最近在学习多媒体处理这一块，然后就找到javacv这个开源库,封装了计算机视觉处理所需要的全部库，很强大。 当前配置 Windows 10 专业版 64bit Android Studio 3.1.4 gradle 3.1.3  ##配置按照开源库中gradle的配置方法。">
+<meta name="twitter:image" content="https://img-blog.csdn.net/20180818131204262?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4NDY3ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70">
   
     <link rel="alternative" href="/atom.xml" title="nearby" type="application/atom+xml">
   
@@ -165,16 +170,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-dev-android-javacv-config-0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-dev-android-javacv-config-0" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/08/18/dev-android-javacv-config-0/">Android studio 配置Javacv出现“More than one file was found with OS independent path”的解决办法</a>
+    <h1 class="article-title" itemprop="name">
+      Android studio 配置Javacv出现“More than one file was found with OS independent path”的解决办法
     </h1>
   
 
@@ -194,7 +197,24 @@
 <li>gradle 3.1.3</li>
 </ul>
 <p>##配置<br>按照开源库中gradle的配置方法。<br><img src="https://img-blog.csdn.net/20180818131204262?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4NDY3ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="gradle添加开源库的依赖"></p>
-        
+<a id="more"></a>
+<p>看着配置就是这么简单，那么就点一下“sync now”，那就进入一段下载时间，下载完之后，点击运行，这里就是为了看配置能不能行。</p>
+<h2 id="出现配置问题"><a href="#出现配置问题" class="headerlink" title="出现配置问题"></a>出现配置问题</h2><p>诶，果然是不行出现：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">More than one file was found with OS independent path </span><br><span class="line"><span class="string">'org/bytedeco/javacpp/windows-x86/api-ms-win-crt-locale-l1-1-0.dll</span></span><br></pre></td></tr></table></figure></p>
+<p>看着意思是有重复的动态库？</p>
+<h3 id="尝试1"><a href="#尝试1" class="headerlink" title="尝试1"></a>尝试1</h3><p>嗯，去c盘看看，嗯，找到很多<em>(:з」∠)</em> ，java安装位置下面就有两个，其他应用也有，怎么搞？想一下歪脑筋，删一个试试？<br><strong>然而并没有什么效果……</strong><br>那就只能放弃这种偏方了，毕竟也可能影响其他应用。</p>
+<h3 id="尝试2"><a href="#尝试2" class="headerlink" title="尝试2"></a>尝试2</h3><p>搜索，自己找</p>
+<ol>
+<li>先去开源库Issues看看<br>找到了<a href="https://github.com/bytedeco/javacv/issues/1015" target="_blank" rel="noopener">build failed</a>，开心(〃’▽’〃)还是有好几个人遇到同样的问题，然而，找到正面回答这个问题的答案，但是看起来问题有点类似。<br><img src="https://img-blog.csdn.net/20180818133833760?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3UwMTI4NDY3ODk=/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="这里写图片描述"></li>
+<li>尝试<br>既然是是找到重复的，那就只取其中一个就好了， 思路OK，试试。<br>加一个。<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">	packagingOptions &#123;</span><br><span class="line">	    pickFirst  <span class="string">'org/bytedeco/javacpp/windows-x86/api-ms-win-crt-locale-l1-1-0.dll'</span></span><br><span class="line">	    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>构建一下试试。<br>确实没有相同的错误，但是⊙︿⊙有提示其他文件了，同样是window的动态库，经过若干次的构建，添加pickFirst，最终可以了 -(゜-゜)つロ乾杯~。</p>
+<ol>
+<li>结果<br>增加比较多的pickFirst，是我电脑装了一些其他软件(´･_･`)？？还找不到原因。<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">packagingOptions &#123;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-locale-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/concrt140.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-utility-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-math-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-locale-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/linux-x86_64/libgomp.so.1&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-stdio-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-convert-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/macosx-x86_64/libusb-1.0.0.dylib&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-time-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/linux-x86/libgomp.so.1&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-math-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-environment-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-multibyte-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-runtime-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/msvcp140.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-stdio-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-string-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/vcruntime140.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-multibyte-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-filesystem-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-time-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/msvcp140.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-environment-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/concrt140.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/api-ms-win-crt-heap-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-heap-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-heap-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/vcruntime140.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-convert-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-string-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-runtime-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86/api-ms-win-crt-filesystem-l1-1-0.dll&apos;</span><br><span class="line">        pickFirst &apos;org/bytedeco/javacpp/windows-x86_64/api-ms-win-crt-utility-l1-1-0.dll&apos;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>这里也就是刚开始配置javacv，具体的时候还没开始，也不知道这能不能用。<br>这只是想到的一种解法，不知道其他解法，如果有其他有效的解法，评论区回一下，感谢。</p>
+
       
 
       
@@ -227,447 +247,74 @@
 
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/08/18/dev-android-javacv-config-0/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=https://daynearby.github.io/2018/08/18/dev-android-javacv-config-0/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
 
-
-
-
-
   
-    <article id="post-dev-android-7-1-shortcutmanager" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/10/dev-android-7-1-shortcutmanager/">Android 7.1 应用快捷方式</a>
-    </h1>
   
-
-        
-        <a href="/2017/09/10/dev-android-7-1-shortcutmanager/" class="archive-article-date">
-  	<time datetime="2017-09-10T12:29:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-09-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>在Android 7.1之后添加的新功能，这里就暂且翻译成：快捷方式，简单地理解：在长按应用图标的情况下，在应用图标上显示的快捷方式，该快捷方式可以点击进入Activity，长按拖动创建一个在Launcher上的图标。<br>  现在市场上已经是有很多应用增加了这项功能，如：印象笔记、支付宝、哔哩哔哩、IT之家、知乎、美团，以上是我的手机安装的应用中看到的，其他的就暂时没了解到，可以看一下效果。</p>
-<p> <img src="http://olah6fzfx.bkt.clouddn.com/%E6%94%AF%E4%BB%98%E5%AE%9D_shortcut.png" alt="支付宝"> <img src="http://olah6fzfx.bkt.clouddn.com/%E5%93%94%E5%93%A9%E5%93%94%E5%93%A9_shortcut.png" alt="哔哩哔哩"></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/09/10/dev-android-7-1-shortcutmanager/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
+    <a href="/2017/09/10/dev-android-7-1-shortcutmanager/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Android 7.1 应用快捷方式</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
-    <article id="post-dev-android-n-gallery2-scale" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/08/08/dev-android-n-gallery2-scale/">Android Gallery2 修改双击、手势放大的最大倍数</a>
-    </h1>
-  
-
-        
-        <a href="/2017/08/08/dev-android-n-gallery2-scale/" class="archive-article-date">
-  	<time datetime="2017-08-08T07:31:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-08-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Gallery2，android原生的图库，图库中图片缩放有两种方式：1.双击放大，2.双指手势放大。<br>下面说一下修改这里的最大放大倍数。<br>这里修改放大倍数为3倍，照片放到最大后的伸缩范围0.5。</p>
-<p>分开两种情况：截图和照片。这两种是不同的缩放倍数，需要两个都进行修改。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/08/08/dev-android-n-gallery2-scale/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-dev-android-n-auto-brightness" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/27/dev-android-n-auto-brightness/">Android 7.0 亮度自动模式下：手动调节亮度与显示当前亮度值</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/27/dev-android-n-auto-brightness/" class="archive-article-date">
-  	<time datetime="2017-06-27T07:04:42.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-27</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>根据需求，需要对当前的自动模式的逻辑进行更改，先描述一下具体需求：<br>在自动调节模式下：</p>
-<ol>
-<li>当光线发生变化的时候，需要在seekBar显示当前的亮度值</li>
-<li>自动模式还可以通过手动调整，并且调整之后当前亮度可以保持，不会立即被自动调节覆盖。</li>
-<li>对比机上SeekBar对应当前亮度有变化过程，也就是缓慢增加或者减少。</li>
-</ol>
-<p>了解清楚需求后，那么需要先了解当前的逻辑的实现，再对当前的逻辑进行修改，否则就会存在各种未考虑的问题，了解当前的逻辑后根据具体需求，整理出需要修改的问题点，一个一个地解决，保证每个步骤的可行性，那么最后的集成就不会有什么明显的错误存在。</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/27/dev-android-n-auto-brightness/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-dev-android-n-usb-mode" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/06/13/dev-android-n-usb-mode/">Android USB默认连接模式为MTP</a>
-    </h1>
-  
-
-        
-        <a href="/2017/06/13/dev-android-n-usb-mode/" class="archive-article-date">
-  	<time datetime="2017-06-13T11:41:10.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>很多时候，手机项目开发，客户都要求配置USB的默认连接方式，但是在Android 6.0以及之后的版本就直接配置USB连接模式，看到的USB连接模式还是仅充电，而这是google的默认设计。那么对于这个问题，也看了很多网上的一些解法，如：Android 5.0可以直接配置默认值，6.0就不可行了。另外，还有在USB连接的时候进行设置，当连接之后就执行一次设置USB连接模式，将MTP设置为当前连接模式，这样的做法在7.0上面也是可以的。<br>事实上，当仅充电的时候，查看当前USB模式的配置，就算是mtp，但是还是没有显示SD卡和内部存储器，主要是一个标志的问题。</p>
-<h5 id="现有的一种解法"><a href="#现有的一种解法" class="headerlink" title="现有的一种解法"></a>现有的一种解法</h5><p>那么这里先说一下在连接USB的情况下，执行一次USB连接模式的设置，这里有一位大牛的方法，并且提到Android 6.0以前的做法，<a href="http://www.jianshu.com/p/3ff3e7829493" target="_blank" rel="noopener">Android 6.0 USB连接模式默认选为MTP</a> ，大家去参考学习一下，那么我说一下这位大牛的改法，在Android 6.0和7.0上面的表现的不同一个的地方：</p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/06/13/dev-android-n-usb-mode/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-impressions-4-my-initiation" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/25/impressions-4-my-initiation/">先想好再动手</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/25/impressions-4-my-initiation/" class="archive-article-date">
-  	<time datetime="2017-02-25T06:22:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>——说干就干，预想过过程和结果了吗？</p>
-<p>今天跟一个朋友聊另外一个朋友的事情，想起以前的自己。想起以前的一个坏习惯：没想清楚就动手，忙得都感动自己了，但是就拿不出什么成果。那么讲一下这个坏习惯给自己带来的遭遇吧。</p>
-<p>从事做软件开发的，我在第一家或者说是第二家公司吧，为什么一开始说是第一家呢，因为在第一家是没有签什么合同的，就是口头协议，在第二家才是有签了具体合同，那这里还是叫第二家吧。</p>
-<p>在这第二家公司实习三个月的过程中，完全没有什么人带的感觉，连师傅领进门都没有，应该说是：说干就干，说做什么功能就直接干。</p>
-<p><img src="http://olah6fzfx.bkt.clouddn.com/mmexport1488004831245.jpg" alt="说干就干"></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/25/impressions-4-my-initiation/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-dev-android-settings-n" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/13/dev-android-settings-n/">Android 7.0 Settings 加载选项</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/13/dev-android-settings-n/" class="archive-article-date">
-  	<time datetime="2017-02-13T10:40:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-13</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>先写在前面，这说的Settings加载选项是指Settings这个应用显示在主界面的选项，这个修改需要对系统源码进行修改。</p>
-<p>Android 7.0 Settings顶部多了一个建议选项，多了个侧边栏，操作更加便捷了。<br><img src="http://olah6fzfx.bkt.clouddn.com/device-2017-02-13-195958.png" alt="原生7.0主界面"> <img src="http://olah6fzfx.bkt.clouddn.com/device-2017-02-13-195909.png" alt="原生7.0侧边栏"></p>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开发</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/13/dev-android-settings-n/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-impressions-work-6-months" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/10/impressions-work-6-months/">刚开始参加工作</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/10/impressions-work-6-months/" class="archive-article-date">
-  	<time datetime="2017-02-10T09:00:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>刚开始工作，什么都不懂。</p>
-<p>那么将加班当成一种常态吧。只是因为我什么都不懂。</p>
-<p>勤劳一点，学多一点。也是对自己玩过来的几年负责。</p>
-<p>换种心态：拿3k工资，干8k的活，出去就是至少能上8k。</p>
-<p>工作了也要保持爱好，因为工作仅仅是工作，并不是生活的全部，只是生活的一部分。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/10/impressions-work-6-months/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
+</nav>
 
 
 
@@ -675,9 +322,19 @@
 
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &raquo;</a>
-    </nav>
+  
+
+  
+  <div id="SOHUCS" sid="dev-android-javacv-config-0" ></div> 
+<script type="text/javascript"> 
+(function(){ 
+var appid = "cyt5nbNEm"; 
+var conf = "prod_f3ab5d6db69b60fd89bf68f1af9ef977"; 
+var width = window.innerWidth || document.documentElement.clientWidth; 
+if (width < 960) { 
+window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf + '"><\/script>'); } else { var loadJs=function(d,a){var c=document.getElementsByTagName("head")[0]||document.head||document.documentElement;var b=document.createElement("script");b.setAttribute("type","text/javascript");b.setAttribute("charset","UTF-8");b.setAttribute("src",d);if(typeof a==="function"){if(window.attachEvent){b.onreadystatechange=function(){var e=b.readyState;if(e==="loaded"||e==="complete"){b.onreadystatechange=null;a()}}}else{b.onload=a}}c.appendChild(b)};loadJs("//changyan.sohu.com/upload/changyan.js",function(){window.changyan.api.config({appid:appid,conf:conf})}); } })(); </script>
+  
+
   
 
 
@@ -700,8 +357,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
