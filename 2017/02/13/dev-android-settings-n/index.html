@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="nearby">
 <meta property="og:description" content="先写在前面，这说的Settings加载选项是指Settings这个应用显示在主界面的选项，这个修改需要对系统源码进行修改。 Android 7.0 Settings顶部多了一个建议选项，多了个侧边栏，操作更加便捷了。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://olah6fzfx.bkt.clouddn.com/device-2017-02-13-195958.png">
-<meta property="og:image" content="http://olah6fzfx.bkt.clouddn.com/device-2017-02-13-195909.png">
-<meta property="og:updated_time" content="2018-08-18T06:43:06.093Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/device-2017-02-13-195958.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/device-2017-02-13-195909.png">
+<meta property="og:updated_time" content="2019-03-04T13:57:11.497Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android 7.0 Settings 加载选项">
 <meta name="twitter:description" content="先写在前面，这说的Settings加载选项是指Settings这个应用显示在主界面的选项，这个修改需要对系统源码进行修改。 Android 7.0 Settings顶部多了一个建议选项，多了个侧边栏，操作更加便捷了。">
-<meta name="twitter:image" content="http://olah6fzfx.bkt.clouddn.com/device-2017-02-13-195958.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/device-2017-02-13-195958.png">
   
     <link rel="alternative" href="/atom.xml" title="nearby" type="application/atom+xml">
   
@@ -191,7 +191,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>先写在前面，这说的Settings加载选项是指Settings这个应用显示在主界面的选项，这个修改需要对系统源码进行修改。</p>
-<p>Android 7.0 Settings顶部多了一个建议选项，多了个侧边栏，操作更加便捷了。<br><img src="http://olah6fzfx.bkt.clouddn.com/device-2017-02-13-195958.png" alt="原生7.0主界面"> <img src="http://olah6fzfx.bkt.clouddn.com/device-2017-02-13-195909.png" alt="原生7.0侧边栏"></p>
+<p>Android 7.0 Settings顶部多了一个建议选项，多了个侧边栏，操作更加便捷了。<br><img src="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/device-2017-02-13-195958.png" alt="原生7.0主界面"> <img src="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/device-2017-02-13-195909.png" alt="原生7.0侧边栏"></p>
 <a id="more"></a>
 <h4 id="Android-6-0"><a href="#Android-6-0" class="headerlink" title="Android 6.0"></a>Android 6.0</h4><p>之前做Android 6.0开发的，都会了解到6.0的Settings加载选项是通过加载dashboard_categories.xml，获取需要显示的选项，并且在SettingsActivity中也进行判断是否要显示，所以在6.0上添加一个选项是比较简单的，直接在dashboard_categories.xml添加icon、title、summary，也可以添加目标fragment和Intent，这样就可以顺利跳转到对应的界面了。但是在7.0上，google对Settings进行了重构。</p>
 <h4 id="Android-7-0"><a href="#Android-7-0" class="headerlink" title="Android 7.0"></a>Android 7.0</h4><p>7.0的Settings的选项不再从dashboard_categories.xml中加载选项列表，而是通过在Androidmanifest.xml中，配置intent-filter的Action，在通过PackageManager进行指定的Action进行搜索，那么就可以获取到需要显示的选项列表了，并且也需要在代码中进行判断，判断哪些功能需要显示与否。<br>TileUtils.java中通过几个Action进行获取系统中对应的activity，如Settings中的几个</p>

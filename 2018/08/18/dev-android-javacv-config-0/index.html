@@ -16,13 +16,13 @@
 <meta property="og:site_name" content="nearby">
 <meta property="og:description" content="前言最近在学习多媒体处理这一块，然后就找到javacv这个开源库,封装了计算机视觉处理所需要的全部库，很强大。 当前配置 Windows 10 专业版 64bit Android Studio 3.1.4 gradle 3.1.3  ##配置按照开源库中gradle的配置方法。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="http://olah6fzfx.bkt.clouddn.com/20180818131204262.png">
-<meta property="og:image" content="http://olah6fzfx.bkt.clouddn.com/20180818133833760.png">
-<meta property="og:updated_time" content="2018-10-22T12:49:54.663Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/20180818131204262.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/20180818133833760.png">
+<meta property="og:updated_time" content="2019-03-04T13:56:03.097Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Android studio 配置Javacv出现“More than one file was found with OS independent path”的解决办法">
 <meta name="twitter:description" content="前言最近在学习多媒体处理这一块，然后就找到javacv这个开源库,封装了计算机视觉处理所需要的全部库，很强大。 当前配置 Windows 10 专业版 64bit Android Studio 3.1.4 gradle 3.1.3  ##配置按照开源库中gradle的配置方法。">
-<meta name="twitter:image" content="http://olah6fzfx.bkt.clouddn.com/20180818131204262.png">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/20180818131204262.png">
   
     <link rel="alternative" href="/atom.xml" title="nearby" type="application/atom+xml">
   
@@ -196,7 +196,7 @@
 <li>Android Studio 3.1.4</li>
 <li>gradle 3.1.3</li>
 </ul>
-<p>##配置<br>按照开源库中gradle的配置方法。<br><img src="http://olah6fzfx.bkt.clouddn.com/20180818131204262.png" alt="gradle添加开源库的依赖"></p>
+<p>##配置<br>按照开源库中gradle的配置方法。<br><img src="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/20180818131204262.png" alt="gradle添加开源库的依赖"></p>
 <a id="more"></a>
 <p>看着配置就是这么简单，那么就点一下“sync now”，那就进入一段下载时间，下载完之后，点击运行，这里就是为了看配置能不能行。</p>
 <h2 id="出现配置问题"><a href="#出现配置问题" class="headerlink" title="出现配置问题"></a>出现配置问题</h2><p>诶，果然是不行出现：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">More than one file was found with OS independent path </span><br><span class="line"><span class="string">'org/bytedeco/javacpp/windows-x86/api-ms-win-crt-locale-l1-1-0.dll</span></span><br></pre></td></tr></table></figure></p>
@@ -204,7 +204,7 @@
 <h3 id="尝试1"><a href="#尝试1" class="headerlink" title="尝试1"></a>尝试1</h3><p>嗯，去c盘看看，嗯，找到很多<em>(:з」∠)</em> ，java安装位置下面就有两个，其他应用也有，怎么搞？想一下歪脑筋，删一个试试？<br><strong>然而并没有什么效果……</strong><br>那就只能放弃这种偏方了，毕竟也可能影响其他应用。</p>
 <h3 id="尝试2"><a href="#尝试2" class="headerlink" title="尝试2"></a>尝试2</h3><p>搜索，自己找</p>
 <ol>
-<li>先去开源库Issues看看<br>找到了<a href="https://github.com/bytedeco/javacv/issues/1015" target="_blank" rel="noopener">build failed</a>，开心(〃’▽’〃)还是有好几个人遇到同样的问题，然而，找到正面回答这个问题的答案，但是看起来问题有点类似。<br><img src="http://olah6fzfx.bkt.clouddn.com/20180818133833760.png" alt="类似问题"></li>
+<li>先去开源库Issues看看<br>找到了<a href="https://github.com/bytedeco/javacv/issues/1015" target="_blank" rel="noopener">build failed</a>，开心(〃’▽’〃)还是有好几个人遇到同样的问题，然而，找到正面回答这个问题的答案，但是看起来问题有点类似。<br><img src="https://raw.githubusercontent.com/daynearby/BlogBackup/master/source/images/20180818133833760.png" alt="类似问题"></li>
 <li>尝试<br>既然是是找到重复的，那就只取其中一个就好了， 思路OK，试试。<br>加一个。<figure class="highlight gradle"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">android &#123;</span><br><span class="line">	packagingOptions &#123;</span><br><span class="line">	    pickFirst  <span class="string">'org/bytedeco/javacpp/windows-x86/api-ms-win-crt-locale-l1-1-0.dll'</span></span><br><span class="line">	    &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
