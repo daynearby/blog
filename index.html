@@ -167,6 +167,82 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-system-boot-sh" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/08/31/system-boot-sh/">Android 开机启动shell脚本</a>
+    </h1>
+  
+
+        
+        <a href="/2019/08/31/system-boot-sh/" class="archive-article-date">
+  	<time datetime="2019-08-31T03:08:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-31</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>突然接到一个集成功能的需求，然后看了一下是由上层应用 + 一个linux进程实现的功能，但是我也仅仅是负责应用开发，开机自动启动linux进程还是有点懵的。</p>
+<h4 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h4><ol>
+<li>android 9.0</li>
+<li>mtk 平台</li>
+</ol>
+<h4 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h4><p>因为集成的功能只是demo状态，对应的功能提供公司只提供的是三个apk，5个动态库（*.so）,一个linux可执行程序和一个可执行程序的配置文件。</p>
+<p>在linux可执行程序执行之前，这个功能还需要设置一个环境变量，尝试了几种方式，改变文件放置位置、权限，但是最终还是失败告终。有点沮丧了，重新分析一次，决定要用shell实现设置环境变量，接着执行linux可执行程序，最终是这种方式实现了。<br>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">开发</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/system/" class="article-tag-list-link color2">system</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/08/31/system-boot-sh/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+  
     <article id="post-dev-android-javacv-config-0" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -652,69 +728,6 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2017/02/13/dev-android-settings-n/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-  
-    <article id="post-impressions-work-6-months" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/02/10/impressions-work-6-months/">刚开始参加工作</a>
-    </h1>
-  
-
-        
-        <a href="/2017/02/10/impressions-work-6-months/" class="archive-article-date">
-  	<time datetime="2017-02-10T09:00:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-02-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>刚开始工作，什么都不懂。</p>
-<p>那么将加班当成一种常态吧。只是因为我什么都不懂。</p>
-<p>勤劳一点，学多一点。也是对自己玩过来的几年负责。</p>
-<p>换种心态：拿3k工资，干8k的活，出去就是至少能上8k。</p>
-<p>工作了也要保持爱好，因为工作仅仅是工作，并不是生活的全部，只是生活的一部分。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">随笔</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/02/10/impressions-work-6-months/">展开全文 >></a>
         </p>
       
 
