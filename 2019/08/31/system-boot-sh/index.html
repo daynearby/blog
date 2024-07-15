@@ -9,17 +9,17 @@
   <title>Android 开机启动shell脚本 | nearby</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="接到一个集成功能的需求，然后看了一下是由上层应用 + linux进程实现的功能，需要增加开机自动启动linux进程，没弄过有点懵。 环境 android 9.0 mtk 平台  实现思路因为集成的功能只是demo状态，对应的功能提供公司只提供的是三个apk，5个动态库（*.so）,一个linux可执行程序和一个可执行程序的配置文件。 在linux可执行程序执行之前，这个功能还需要设置一个环境变量，">
-<meta name="keywords" content="开发">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Android 开机启动shell脚本">
 <meta property="og:url" content="https://daynearby.github.io/2019/08/31/system-boot-sh/index.html">
 <meta property="og:site_name" content="nearby">
 <meta property="og:description" content="接到一个集成功能的需求，然后看了一下是由上层应用 + linux进程实现的功能，需要增加开机自动启动linux进程，没弄过有点懵。 环境 android 9.0 mtk 平台  实现思路因为集成的功能只是demo状态，对应的功能提供公司只提供的是三个apk，5个动态库（*.so）,一个linux可执行程序和一个可执行程序的配置文件。 在linux可执行程序执行之前，这个功能还需要设置一个环境变量，">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-08-31T06:18:50.544Z">
+<meta property="og:locale">
+<meta property="article:published_time" content="2019-08-31T03:08:16.000Z">
+<meta property="article:modified_time" content="2019-08-31T06:18:50.544Z">
+<meta property="article:author" content="nearby">
+<meta property="article:tag" content="开发">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android 开机启动shell脚本">
-<meta name="twitter:description" content="接到一个集成功能的需求，然后看了一下是由上层应用 + linux进程实现的功能，需要增加开机自动启动linux进程，没弄过有点懵。 环境 android 9.0 mtk 平台  实现思路因为集成的功能只是demo状态，对应的功能提供公司只提供的是三个apk，5个动态库（*.so）,一个linux可执行程序和一个可执行程序的配置文件。 在linux可执行程序执行之前，这个功能还需要设置一个环境变量，">
   
     <link rel="alternative" href="/atom.xml" title="nearby" type="application/atom+xml">
   
@@ -37,7 +37,7 @@
 
   
 
-</head>
+<meta name="generator" content="Hexo 6.3.0"></head>
 
 <body>
   <div id="container" q-class="show:isCtnShow">
@@ -51,7 +51,7 @@
 			<img src="/img/avatar.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">nearby</a></h1>
+		  <h1 class="header-author"><a href="/"></a></h1>
 		</hgroup>
 		
 
@@ -60,11 +60,11 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/开发/">开发</a></li>
+				<li><a href="/tags/%E5%BC%80%E5%8F%91/">开发</a></li>
 	        
-				<li><a href="/tags/随笔/">随笔</a></li>
+				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 	        
-				<li><a href="/tags/摄影/">爱好</a></li>
+				<li><a href="/tags/%E6%91%84%E5%BD%B1/">爱好</a></li>
 	        
 			</ul>
 		</nav>
@@ -111,7 +111,7 @@
 				<img src="/img/avatar.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">nearby</h1>
+			  <h1 class="header-author js-header-author"></h1>
 			</hgroup>
 			
 			
@@ -148,11 +148,11 @@
 				
 					<li style="width: 25%"><a href="/">主页</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/开发/">开发</a></li>
+					<li style="width: 25%"><a href="/tags/%E5%BC%80%E5%8F%91/">开发</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/随笔/">随笔</a></li>
+					<li style="width: 25%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
 		        
-					<li style="width: 25%"><a href="/tags/摄影/">爱好</a></li>
+					<li style="width: 25%"><a href="/tags/%E6%91%84%E5%BD%B1/">爱好</a></li>
 		        
 				</ul>
 			</nav>
@@ -338,7 +338,7 @@ window.document.write('<script id="changyan_mobile_js" charset="utf-8" type="tex
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2019 nearby
+    		&copy; 2024 nearby
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
